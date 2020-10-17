@@ -88,7 +88,7 @@ Therefore, FFT processing should be applied over the dimension of 128 I/Q time s
 
 ![](images/noiseremoval.jpg)
 
-## Noise Removal Auto-Encoder
+### Noise Removal Auto-Encoder
 
 An autoencoder is a type of artificial neural network used to learn efficient data codings in an unsupervised manner. The aim of an autoencoder is to learn a representation (encoding) for a set of data, typically for dimensionality reduction, by training the network to ignore signal “noise”. Along with the reduction side, a reconstructing side is learnt, where the autoencoder tries to generate from the reduced encoding a representation as close as possible to its original input, hence its name.
 
@@ -97,6 +97,23 @@ An autoencoder is a type of artificial neural network used to learn efficient da
 #### Auto-Encoder prediction results
 
 ![](images/denoised.jpg)
+
+### SMOTE Resampling - Synthetic Minority Over-sampling Technique
+
+ the training set isn’t populated with a satisfactory amount of data points. This constitutes the challenge, generating a sufficient amount of data to train the model on, from the supplementary synthetic, background, and experimental sets. This challenge is further exacerbated by the imbalance of the data.
+With such a small dataset it is important to ensure the data is balanced and unbiased as this can lead to significant misinterpretations of the set by the model, and small inconsistencies can get extrapolated into significant errors.
+
+![](images/imbalance.png)
+
+The first key imbalance is the difference between the number of high and low SNR tracks. As you can see from the adjacent graph there are almost two thousand more low SNR data points than high SNR.
+
+The second key imbalance is between the number of Humans and Animals in the dataset. Clearly, with such a significant difference the model might become biased towards predicting animal instead of human, since this prediction would net a high accuracy for little effort on the model’s part.
+
+Both of these disparities cause significant issues when building the model. If we take a closer look at the relationship between signal quality and target type we see that the majority of animals have low SNR readings and the majority of humans have high SNR readings. Whilst this may seem minor, extrapolated over a number of training intervals our model may make the mistake of conflating a cleaner signal with that of a human, and a noisy signal with that of an animal.
+
+SMOTE (Synthetic Minority Oversampling TEchnique) consists of synthesizing elements for the minority class, based on those that already exist. It works randomly picingk a point from the minority class and computing the k-nearest neighbors for this point. The synthetic points are added between the chosen point and its neighbors. We'll use ratio='minority' to resample the minority class.
+
+![](images/smote.PNG)
 
 ## Convolutional Neural Network Architecture
 
