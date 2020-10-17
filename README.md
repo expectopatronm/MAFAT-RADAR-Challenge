@@ -54,3 +54,15 @@ The I/Q matrices that are supplied to participants have been standardized, but t
 
 The metadata of a segment includes track id, location id, location type, day index, sensor id and the SNR level. The segments were collected from several different geographic locations, a unique id was given per location. Each location consists of one or more sensors, a sensor belongs to a single location. A unique id was given per sensor. Each sensor has been used in one or more days, each day is represented by an index. A single track appears in a single location, sensor and day. The segments were taken from longer tracks, each track was given a unique id.
 
+### Preprocessing steps
+
+![](images/noiseremoval.png)
+
+Noise Removal Auto Encoder
+
+### Neural Network Architecture
+
+Taking inspiration from the ResNet architecture, we implemented a modified Mini-ResNet architecture.
+
+![](images/model_arch.jpg)
+
