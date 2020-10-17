@@ -58,7 +58,7 @@ The metadata of a segment includes track id, location id, location type, day ind
 
 ![](images/noiseremoval.jpg)
 
-#### Noise Removal Auto-Encoder
+### Noise Removal Auto-Encoder
 
 ![](images/autoencoder.jpg)
 
