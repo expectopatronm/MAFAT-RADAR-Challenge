@@ -75,3 +75,7 @@ Taking inspiration from the ResNet architecture, we implemented a modified Mini-
 ### Final Results
 
 ![](images/graph.png)
+
+Top 10% of the submissions.
+
+![](images/results.png)
