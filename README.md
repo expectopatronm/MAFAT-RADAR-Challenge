@@ -111,7 +111,7 @@ The second key imbalance is between the number of Humans and Animals in the data
 
 Both of these disparities cause significant issues when building the model. If we take a closer look at the relationship between signal quality and target type we see that the majority of animals have low SNR readings and the majority of humans have high SNR readings. Whilst this may seem minor, extrapolated over a number of training intervals our model may make the mistake of conflating a cleaner signal with that of a human, and a noisy signal with that of an animal.
 
-SMOTE (Synthetic Minority Oversampling TEchnique) consists of synthesizing elements for the minority class, based on those that already exist. It works randomly picingk a point from the minority class and computing the k-nearest neighbors for this point. The synthetic points are added between the chosen point and its neighbors. We'll use ratio='minority' to resample the minority class.
+SMOTE (Synthetic Minority Oversampling TEchnique) consists of synthesizing elements for the minority class, based on those that already exist. It works randomly picking a point from the minority class and computing the k-nearest neighbors for this point. The synthetic points are added between the chosen point and its neighbors. We'll use ratio='minority' to resample the minority class.
 
 ![](images/smote.PNG)
 
