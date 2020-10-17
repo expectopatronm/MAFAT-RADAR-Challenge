@@ -36,7 +36,7 @@ The objective of this competition is to explore whether creative approaches and 
  
 ### Radar tracks spectrograms (visual representation of the I/Q signal matrix)
 
-![](images/Spectrograms.png)
+![](images/Spectrograms.jpg)
 
 
 ### The Data
@@ -56,13 +56,22 @@ The metadata of a segment includes track id, location id, location type, day ind
 
 ### Preprocessing steps
 
-![](images/noiseremoval.png)
+![](images/noiseremoval.jpg)
 
-Noise Removal Auto Encoder
+#### Noise Removal Auto-Encoder
 
-### Neural Network Architecture
+![](images/autoencoder.jpg)
+
+#### Auto-Encoder prediction results
+
+![](images/denoised.jpg)
+
+### Convolutional Neural Network Architecture
 
 Taking inspiration from the ResNet architecture, we implemented a modified Mini-ResNet architecture.
 
 ![](images/model_arch.jpg)
 
+### Final Results
+
+![](images/graph.png)
